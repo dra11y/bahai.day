@@ -12,13 +12,25 @@ specifiers:
   '@angular/platform-browser': ^15.1.0
   '@angular/platform-browser-dynamic': ^15.1.0
   '@angular/router': ^15.1.0
+  '@fullcalendar/angular': ^6.0.3
+  '@fullcalendar/bootstrap5': ^6.0.3
+  '@fullcalendar/core': ^6.0.3
+  '@fullcalendar/daygrid': ^6.0.3
+  '@fullcalendar/list': ^6.0.3
+  '@popperjs/core': ^2.11.6
   '@types/jasmine': ~4.3.0
+  '@types/luxon': ^3.2.0
+  badidate: ^3.0.2
+  bootstrap: ^5.2.3
+  bootstrap-icons: ^1.10.3
   jasmine-core: ~4.5.0
   karma: ~6.4.0
   karma-chrome-launcher: ~3.1.0
   karma-coverage: ~2.2.0
   karma-jasmine: ~5.1.0
   karma-jasmine-html-reporter: ~2.0.0
+  luxon: ^3.2.1
+  meeussunmoon: ^3.0.3
   rxjs: ~7.8.0
   tslib: ^2.3.0
   typescript: ~4.9.4
@@ -33,6 +45,17 @@ dependencies:
   '@angular/platform-browser': 15.1.0_eifxzngnnnjsj3jgsq7frmjnk4
   '@angular/platform-browser-dynamic': 15.1.0_bjmxt24dowfhcklhftsg4zga3a
   '@angular/router': 15.1.0_shtnd5whtbyicxnxmafd6uxkza
+  '@fullcalendar/angular': 6.0.3_murrbgaeijjioo2cqnrm6fn6ni
+  '@fullcalendar/bootstrap5': 6.0.3_@fullcalendar+core@6.0.3
+  '@fullcalendar/core': 6.0.3
+  '@fullcalendar/daygrid': 6.0.3_@fullcalendar+core@6.0.3
+  '@fullcalendar/list': 6.0.3_@fullcalendar+core@6.0.3
+  '@popperjs/core': 2.11.6
+  badidate: 3.0.2
+  bootstrap: 5.2.3_@popperjs+core@2.11.6
+  bootstrap-icons: 1.10.3
+  luxon: 3.2.1
+  meeussunmoon: 3.0.3
   rxjs: 7.8.0
   tslib: 2.4.1
   zone.js: 0.12.0
@@ -42,6 +65,7 @@ devDependencies:
   '@angular/cli': 15.1.1
   '@angular/compiler-cli': 15.1.0_cw5pxmpaualxc53b5r24ke3psi
   '@types/jasmine': 4.3.1
+  '@types/luxon': 3.2.0
   jasmine-core: 4.5.0
   karma: 6.4.1
   karma-chrome-launcher: 3.1.1
@@ -1819,6 +1843,49 @@ packages:
     dev: true
     optional: true
 
+  /@fullcalendar/angular/6.0.3_murrbgaeijjioo2cqnrm6fn6ni:
+    resolution: {integrity: sha512-HlvtBWCI2/qoBsGpqOcNdHIqO0VfXefqtjoOSi/L8yxBGp7J4u+yh7/L5QGfFNgeI/p7S6fjYAwHgPAepCpmRQ==}
+    peerDependencies:
+      '@angular/common': 12 - 15
+      '@angular/core': 12 - 15
+      '@fullcalendar/core': ~6.0.3
+    dependencies:
+      '@angular/common': 15.1.0_da7kisvgd6fwe32k5n7hd5z3wa
+      '@angular/core': 15.1.0_rxjs@7.8.0+zone.js@0.12.0
+      '@fullcalendar/core': 6.0.3
+      tslib: 2.4.1
+    dev: false
+
+  /@fullcalendar/bootstrap5/6.0.3_@fullcalendar+core@6.0.3:
+    resolution: {integrity: sha512-vz1u4LK5KHP/rkoIOvvkkosqRN9zVcon/fP6BeNUU4JX4Eu5vM42asGdPcjhW4WGJVF7g2AZN38y41uDnB80Uw==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.0.3
+    dependencies:
+      '@fullcalendar/core': 6.0.3
+    dev: false
+
+  /@fullcalendar/core/6.0.3:
+    resolution: {integrity: sha512-4REVuYAxqJjXpLhOC0oABap4Xl8gmykCsHgL61Yy3rdCwWVx/SoE5L3hs8ZUCmsRrgSZOzgiH8sle87RaGi8iw==}
+    dependencies:
+      preact: 10.11.3
+    dev: false
+
+  /@fullcalendar/daygrid/6.0.3_@fullcalendar+core@6.0.3:
+    resolution: {integrity: sha512-JWWwWRsi1dgTlbXSbqjmBjd9SRN6wuXOvOwcuvW5sZtk77vtuD5DKcqoitOREq4e2P/f2WdMV6812AVSAPRODw==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.0.3
+    dependencies:
+      '@fullcalendar/core': 6.0.3
+    dev: false
+
+  /@fullcalendar/list/6.0.3_@fullcalendar+core@6.0.3:
+    resolution: {integrity: sha512-eQu5QXS8vaHjFd2dfxivVcN4lgxpivcIHDcSFM/3lDbCmI4syAder6JwuRJdGb2QX4ej9KSp+rPyGXjzGRdY3A==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.0.3
+    dependencies:
+      '@fullcalendar/core': 6.0.3
+    dev: false
+
   /@gar/promisify/1.1.3:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
     dev: true
@@ -1998,6 +2065,10 @@ packages:
       - supports-color
     dev: true
 
+  /@popperjs/core/2.11.6:
+    resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
+    dev: false
+
   /@schematics/angular/15.1.1:
     resolution: {integrity: sha512-Ujo4vt/r3WzIhGn2I2Lt3eOTWSsVxoXfcXxFRuxl3cil/9mH1X66hDTQ2DVYiXPFGcQMjcNaDwlQxyor4yGbqA==}
     engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -2101,6 +2172,10 @@ packages:
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
+    dev: true
+
+  /@types/luxon/3.2.0:
+    resolution: {integrity: sha512-lGmaGFoaXHuOLXFvuju2bfvZRqxAqkHPx9Y9IQdQABrinJJshJwfNCKV+u7rR3kJbiqfTF/NhOkcxxAFrObyaA==}
     dev: true
 
   /@types/mime/3.0.1:
@@ -2529,6 +2604,13 @@ packages:
       - supports-color
     dev: true
 
+  /badidate/3.0.2:
+    resolution: {integrity: sha512-ocAT/VeZ71zK7iO9DClE6ZhvkWwkG9x8Lq+WLikVw7KHHYkEtIAelJe0MrhM4KXWw/jIwAD4Tl5HD4f8tN+Dog==}
+    engines: {node: '>= 10.0.0'}
+    dependencies:
+      luxon: 1.28.1
+    dev: false
+
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
@@ -2595,6 +2677,18 @@ packages:
   /boolbase/1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
     dev: true
+
+  /bootstrap-icons/1.10.3:
+    resolution: {integrity: sha512-7Qvj0j0idEm/DdX9Q0CpxAnJYqBCFCiUI6qzSPYfERMcokVuV9Mdm/AJiVZI8+Gawe4h/l6zFcOzvV7oXCZArw==}
+    dev: false
+
+  /bootstrap/5.2.3_@popperjs+core@2.11.6:
+    resolution: {integrity: sha512-cEKPM+fwb3cT8NzQZYEu4HilJ3anCrWqh3CHAok1p9jXqMPsPTBhU25fBckEJHJ/p+tTxTFTsFQGM+gaHpi3QQ==}
+    peerDependencies:
+      '@popperjs/core': ^2.11.6
+    dependencies:
+      '@popperjs/core': 2.11.6
+    dev: false
 
   /brace-expansion/1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -4470,6 +4564,15 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
+  /luxon/1.28.1:
+    resolution: {integrity: sha512-gYHAa180mKrNIUJCbwpmD0aTu9kV0dREDrwNnuyFAsO1Wt0EVYSZelPnJlbj9HplzXX/YWXHFTL45kvZ53M0pw==}
+    dev: false
+
+  /luxon/3.2.1:
+    resolution: {integrity: sha512-QrwPArQCNLAKGO/C+ZIilgIuDnEnKx5QYODdDtbFaxzsbZcc/a7WFq7MhsVYgRlwawLtvOUESTlfJ+hc/USqPg==}
+    engines: {node: '>=12'}
+    dev: false
+
   /magic-string/0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
@@ -4548,6 +4651,13 @@ packages:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
     engines: {node: '>= 0.6'}
     dev: true
+
+  /meeussunmoon/3.0.3:
+    resolution: {integrity: sha512-JM5BWaSu8zZQoFRoYEZn5F3hVw20Zh+TARGr/mRe/4jBYtYu74xbitxz5GvZhe/aM+qot8AfjO3WRFmlKIbJnA==}
+    engines: {node: '>= 10.0.0'}
+    dependencies:
+      luxon: 1.28.1
+    dev: false
 
   /memfs/3.4.13:
     resolution: {integrity: sha512-omTM41g3Skpvx5dSYeZIbXKcXoAVc/AoMNwn9TKx++L/gaen/+4TTttmu8ZSch5vfVJ8uJvGbroTsIlslRg6lg==}
@@ -5274,6 +5384,10 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
+
+  /preact/10.11.3:
+    resolution: {integrity: sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg==}
+    dev: false
 
   /pretty-bytes/5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
