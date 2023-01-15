@@ -1,59 +1,63 @@
 @use "sass:math";
 
-.fc-daygrid-day-frame {
-  // .fc-daygrid-day-number {
-  //     border: 2px solid green !important;
-  // }
-  display: flex;
-  flex-direction: column;
+::ng-deep {
 
-  .fc-daygrid-day-top {}
-
-  .fc-daygrid-day-events {
+  .fc-daygrid-day-frame {
+    // .fc-daygrid-day-number {
+    //     border: 2px solid green !important;
+    // }
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    justify-content: flex-start;
-    align-items: stretch;
 
-    .fc-daygrid-event-harness {
+    .fc-daygrid-day-top {}
 
-      .fc-daygrid-event {
-        white-space: normal;
-
-        // word-wrap: break-word !important;
-        /* for make fc-event-title-container expand */
-      }
-    }
-
-  }
-}
-
-.badi-date {
-  display: flex;
-  justify-content: flex-end;
-}
-
-@for $i from 1 through 20 {
-  $deg: (360 - 20) * math.div($i, 20) * (4 - $i % 3);
-  $backgroundColor: hsl($deg 80% 80%);
-  $dayColor: hsl($deg 100% 50%);
-
-  .month-#{$i} {
-    // background-color: $backgroundColor;
-
-    .badi-date .fc-event-title {
-
+    .fc-daygrid-day-events {
       display: flex;
+      flex-direction: column;
       flex-grow: 1;
-      white-space: normal;
-      justify-content: center;
+      justify-content: flex-start;
+      align-items: stretch;
 
-      background-color: $backgroundColor;
-      padding: 5px;
-      min-width: 20pt;
-      text-align: center;
-      border-radius: 9999px;
+      .fc-daygrid-event-harness {
+
+        .fc-daygrid-event {
+          white-space: normal;
+
+          // word-wrap: break-word !important;
+          /* for make fc-event-title-container expand */
+        }
+      }
+
+    }
+  }
+
+
+  .badi-date {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @for $i from 1 through 20 {
+    $deg: (360 - 20) * math.div($i, 20) * (4 - $i % 3);
+    $backgroundColor: hsl($deg 80% 80%);
+    $dayColor: hsl($deg 100% 50%);
+
+    .month-#{$i} {
+      // background-color: $backgroundColor;
+
+      .badi-date .fc-event-title {
+
+        display: flex;
+        flex-grow: 1;
+        white-space: normal;
+        justify-content: center;
+
+        background-color: $backgroundColor;
+        padding: 5px;
+        min-width: 20pt;
+        text-align: center;
+        border-radius: 9999px;
+      }
     }
   }
 }
